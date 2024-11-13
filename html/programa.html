@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Programa</title>
+    <script src="../js/programa.js"></script>
+  </head>
+  <body>
+    <h1>Registro de programas</h1>
+
+    <form action="">
+      <label for="">Código del programa (alfanumérico único)</label>
+      <input type="text" name="codigo" id="codigo" required />
+      <br />
+      <label for="">Nombre del programa</label>
+      <input type="text" name="nombre" id="nombre" required />
+      <br />
+      <label for="">Duración (en semestres)</label>
+      <input type="number" name="duracion" id="duracion" required />
+      <br />
+      <label for="">Modalidad</label>
+      <select name="modalidad" id="modalidad" required>
+        <option value="presencial">Presencial</option>
+        <option value="virtual">Virtual</option>
+        <option value="semipresencial">Semipresencial</option>
+      </select>
+      <br />
+      <label for="">Fecha de inicio</label>
+      <input type="date" name="fecha_inicio" id="fechaInicio" />
+    </form>
+
+    <button onclick="guardarProgramas()">Guardar</button>
+
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f8f9fa;
+        color: #333;
+        margin: 0;
+        padding: 20px;
+      }
+
+      h1 {
+        color: #007bff;
+      }
+
+      form {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+      }
+
+      input[type="text"],
+      input[type="number"],
+      input[type="date"],
+      select {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+
+      button {
+        background-color: #007bff;
+        color: #fff;
+        width: 100%;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background-color: #0056b3;
+      }
+    </style>
+  </body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Matricula</title>
+  </head>
+  <body>
+
+    <h1>Registro de matricula</h1>
+    <form action="">
+      <label for=""
+        >Identificación de matrícula (Número único alfanumérico)</label
+      >
+      <input style="padding-right: 0px;" type="text" name="codigo" id="codigo" required />
+      <br />
+      <label for="">Id del estudiante</label>
+      <select name="idEstudiante" id="idEstudiante" required></select>
+      <br />
+      <label for="">Id del programa</label>
+      <select name="idPrograma" id="idPrograma" required></select>
+      <br />
+      <label for="">Fecha de matrícula</label>
+      <input style="padding-right: 0px;" type="date" name="fecha" id="fecha" />
+      <br />
+      <label for="">Estado de la Matricula</label>
+      <select name="estado" id="estado" required>
+        <option value="activo">Activo</option>
+        <option value="proceso">En proceso</option>
+        <option value="finalizada">Finalizada</option>
+        <option value="cancelada">Cancelada</option>
+      </select>
+    </form>
+
+    <button onclick="guardarMatricula()">Guardar</button>
+
+    <table id="tablaMatriculas">
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>Id Estudiante</th>
+          <th>Id Programa</th>
+          <th>Fecha</th>
+          <th>Estado</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+
+    <script src="../js/matricula.js"></script>
+
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f8f9fa;
+        color: #333;
+        margin: 20px;
+      }
+      
+      h1{
+        color: #007bff;
+      }
+      form {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        margin-bottom: 20px;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+      }
+
+      input[type="text"],
+      input[type="date"],
+      select {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+
+      button {
+        background-color: #007bff;
+        color: #fff;
+        padding: 10px 20px;
+        width: 100%;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background-color: #0056b3;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+      }
+
+      table th,
+      table td {
+        border: 1px solid #ccc;
+        padding: 10px;
+        text-align: left;
+      }
+
+      table th {
+        background-color: #007bff;
+        color: #fff;
+      }
+
+      table tbody tr:nth-child(even) {
+        background-color: #f2f2f2;
+      }
+    </style>
+  </body>
+</html>
